@@ -100,7 +100,13 @@
 <script type="text/javascript">
     
     function squareClick(sId) {
-        $("#s"+sId).addClass("off");
+        var square = $("#s"+sId);
+        if (square.hasClass("off")) {
+            square.removeClass("off");
+        }
+        else {
+            square.addClass("off");
+        }
     }
     
     $(document).ready(function() {
