@@ -37,7 +37,7 @@
 
 <div id="board">
     <div class="row">
-        <div id="s1" class="square off" onclick="squareClick(1);">
+        <div id="s1" class="square" onclick="squareClick(1);">
         </div>
         <div id="s2" class="square" onclick="squareClick(2);">
         </div>
@@ -110,7 +110,13 @@
     }
     
     $(document).ready(function() {
-        
+        for (var i = 0; i < 25; i++) {
+            var square = $("#s"+i);
+            var onOff = Math.floor((Math.random()*2)+1) - 1;
+            if (onOff === 0) {
+                square.addClass("off");
+            }
+        }
     });
 
 </script>
