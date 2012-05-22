@@ -138,10 +138,10 @@
     }
     
     $(document).ready(function() {
-        for (var i = 0; i < 25; i++) {
+        for (var i = 1; i <= 25; i++) {
             var onOff = Math.floor((Math.random()*2)+1) - 1;
             if (onOff === 0) {
-                toggleLight(i);
+                squareClick(i);
             }
         }
     });
