@@ -101,6 +101,30 @@
     
     function squareClick(sId) {
         toggleLight(sId);
+        
+        //toggle up
+        var upId = sId - 5;
+        if (upId >= 1) {
+            toggleLight(upId);
+        }
+        
+        //down
+        var downId = sId + 5;
+        if (downId <= 25) {
+            toggleLight(downId);
+        }
+        
+        //left
+        var leftId = sId - 1;
+        if (leftId%5 != 0) {
+            toggleLight(leftId);
+        }
+        
+        //right
+        var rightId = sId + 1;
+        if (rightId%5 != 1) {
+            toggleLight(rightId);
+        }
     }
     
     function toggleLight(sId) {
