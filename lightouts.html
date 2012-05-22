@@ -100,6 +100,10 @@
 <script type="text/javascript">
     
     function squareClick(sId) {
+        toggleLight(sId);
+    }
+    
+    function toggleLight(sId) {
         var square = $("#s"+sId);
         if (square.hasClass("off")) {
             square.removeClass("off");
@@ -111,10 +115,9 @@
     
     $(document).ready(function() {
         for (var i = 0; i < 25; i++) {
-            var square = $("#s"+i);
             var onOff = Math.floor((Math.random()*2)+1) - 1;
             if (onOff === 0) {
-                square.addClass("off");
+                toggleLight(i);
             }
         }
     });
