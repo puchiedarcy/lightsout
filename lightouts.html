@@ -22,6 +22,11 @@
         background-color: #FFC;
     }
     
+    .off
+    {
+        background-color: #FF82D6;
+    }
+    
     .row
     {
         clear: both;
@@ -32,7 +37,7 @@
 
 <div id="board">
     <div class="row">
-        <div id="s1" class="square" onclick="squareClick(1);">
+        <div id="s1" class="square off" onclick="squareClick(1);">
         </div>
         <div id="s2" class="square" onclick="squareClick(2);">
         </div>
@@ -94,9 +99,8 @@
 </div>
 <script type="text/javascript">
     
-    function squareClick(sId)
-    {
-        alert(sId);
+    function squareClick(sId) {
+        $("#s"+sId).addClass("off");
     }
     
     $(document).ready(function() {
